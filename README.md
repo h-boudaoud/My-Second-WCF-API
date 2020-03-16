@@ -33,7 +33,6 @@ Selon l'installation du SQL Server sur la machine, modifier dans la ligne 51 les
       <endpoint address="adresse du service WCF sur la machine"  />
  </client>
  
- Modifier l'attribue address en renseignant votre adresse du WCf déployé sur votre machine. Si non utiliser http://192.168.0.24/ pour tester depuis ma machine "Contactez moi pour faire le test en m'envoyant un mail à h.boudaoud@hotmail.fr ".
- 
+ Modifier l'attribue address en renseignant votre adresse du WCf déployé sur votre machine. 
  
  
