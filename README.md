@@ -29,9 +29,9 @@ Selon l'installation du SQL Server sur la machine, modifier dans la ligne 51 les
 
  #### Dans My-Second-WCF-API/ConsoleApp/App.config
  
- <client>
-      <endpoint address="adresse du service WCF sur la machine"  />
- </client>
+ < client>
+      < endpoint address="adresse du service WCF sur la machine"  />
+ </ client>
  
  Modifier l'attribue address en renseignant votre adresse du WCf déployé sur votre machine. 
  
