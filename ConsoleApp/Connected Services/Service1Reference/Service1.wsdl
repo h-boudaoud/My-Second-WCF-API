@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:64874/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:64874/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:64874/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SOAP_WCF_Solution.Models" />
+      <xsd:import schemaLocation="http://localhost:64874/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCF_Service" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalance" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountsList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOperatiosList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatiosList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOperatiosList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatiosListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOperationsListOfAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsListOfAccount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOperationsListOfAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsListOfAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOperation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TransferMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoney" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TransferMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransferMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DoWork" message="tns:IService1_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DoWorkResponse" message="tns:IService1_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBalance" message="tns:IService1_GetBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBalanceResponse" message="tns:IService1_GetBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAccountById" message="tns:IService1_GetAccountById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAccountByIdResponse" message="tns:IService1_GetAccountById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAccountsList" message="tns:IService1_GetAccountsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAccountsListResponse" message="tns:IService1_GetAccountsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatiosList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOperatiosList" message="tns:IService1_GetOperatiosList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOperatiosListResponse" message="tns:IService1_GetOperatiosList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationsListOfAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOperationsListOfAccount" message="tns:IService1_GetOperationsListOfAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOperationsListOfAccountResponse" message="tns:IService1_GetOperationsListOfAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddAccount" message="tns:IService1_AddAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddAccountResponse" message="tns:IService1_AddAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOperation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddOperation" message="tns:IService1_AddOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddOperationResponse" message="tns:IService1_AddOperation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TransferMoney" message="tns:IService1_TransferMoney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TransferMoneyResponse" message="tns:IService1_TransferMoney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IService1/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalance">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountById">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAccountById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountsList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAccountsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatiosList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOperatiosList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationsListOfAccount">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOperationsListOfAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOperation">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoney">
+      <soap:operation soapAction="http://tempuri.org/IService1/TransferMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:64874/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
